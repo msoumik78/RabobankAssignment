@@ -68,8 +68,10 @@ Once the application is up and running fine, the endpoints can be accessed in ei
 1. Using swagger by navigating to the URL : http://localhost:8080/swagger-ui.html
 2. Using CURL from the command line :  
 
+```JS
 curl -X GET "http://localhost:8080/account-access?granteeName=Grantee2" -H  "accept: */*"
+```
+
+```JS
 curl -X POST "http://localhost:8080/account-access" -H  "accept: */*" -H  "Content-Type: application/json" -d "{\"accountNumber\":\"12345\",\"granteeName\":\"Grantee2\",\"authType\":\"R\"}"
-
-
- 
+```
