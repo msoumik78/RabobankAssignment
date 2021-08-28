@@ -24,63 +24,52 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+This project exposes 2 REST end points as follows:
+1. A GET endpoint at /manage-acccess which retrieves the list of accounts for which the grantee/POA holder has access/authorizations
+2. A POST endpoint at the same URI to provide grantees with requested authorizations 
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+This project has been built using Spring Boot framework and uses MongoDB (embedded) for storing account and authorization related info
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+* [SpringBoot](https://spring.io/projects/spring-boot)
+* [MongoDB](https://www.mongodb.com/)
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+1. Java 8 should be already installed in the system and set in PATH environment variable
+2. Maven 3.5.x should be already installed in the system and set in PATH environment variable
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
+1. Clone the repo
+2. Open the file data/src/main/resources/logback-spring.xml
+and change the value of the property named 'LOGS' to point to an existing folder/ directory in your system. 
+3. Build the application using the command
    ```JS
-   const API_KEY = 'ENTER YOUR API';
+   mvn clean install -DskipTests
    ```
-
-
+4. Navigate to the folder 'api'
+5. Execute the below command to start the spring boot app:
+   ```JS
+   mvn spring-boot:run
+   ```
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Once the application is up and running fine, the endpoints can be accessed in either of the folliowing ways:
+1. Using swagger by navigating to the URL : http://localhost:8080/swagger-ui.html
+2. Using CURL from the command line :  
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+curl -X GET "http://localhost:8080/account-access?granteeName=Grantee2" -H  "accept: */*"
+curl -X POST "http://localhost:8080/account-access" -H  "accept: */*" -H  "Content-Type: application/json" -d "{\"accountNumber\":\"12345\",\"granteeName\":\"Grantee2\",\"authType\":\"R\"}"
+
+
+ 
