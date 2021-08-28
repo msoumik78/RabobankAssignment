@@ -24,9 +24,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project exposes 2 REST end points as follows:
-1. A GET endpoint at /manage-acccess which retrieves the list of accounts for which the grantee/POA holder has access/authorizations
-2. A POST endpoint at the same URI to provide grantees with requested authorizations 
+This small project is about customer's accounts' access management (or "Power of Attorney" management) abilities and hence exposes the below REST end points :
+1. A GET endpoint at /manage-acccess which retrieves the list of accounts for which a grantee/POA holder has access/authorizations
+2. A POST endpoint at the same URI to provide grantees the ability to add read / write authorization to specific accounts
 
 This project has been built using Spring Boot framework and uses MongoDB (embedded) for storing account and authorization related info
 
