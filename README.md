@@ -15,7 +15,7 @@ You just need to design the data you need to store and the repositories to store
 ### Domain
 
 This module represents the domain you will be working with. The domain module presents classes for the power of attorney
-model that contains a Read or Write authorization for a Payment or Savings account.
+model that contains a Read or Write authorization for a Payment or Savings accountDocument.
 
 ## The task at hand
 
@@ -35,6 +35,6 @@ Notes
 
 ## Background information
 
-A Power of Attorney is used when someone (grantor) wants to give access to his/her account to someone else (grantee). This
-could be read access or write access. In this way the grantee can read/write in the grantors account.
+A Power of Attorney is used when someone (grantor) wants to give access to his/her accountDocument to someone else (grantee). This
+could be read access or write access. In this way the grantee can read/write in the grantors accountDocument.
 Notice that this is a simplified version of reality.

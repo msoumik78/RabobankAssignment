@@ -1,4 +1,8 @@
 target
+/api/target/
+/data/target/
+/domain/target/
+
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###
