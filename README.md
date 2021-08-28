@@ -1,40 +1,86 @@
-## Rabobank Assignment for Authorizations Area
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
 
-This project contains several premade modules for you to implement your code. We hope this helps you with ´what to put
-where´.
+  </ol>
+</details>
 
-### API
 
-This module is where you have to implement the API interface and connect the other two modules
 
-### Data
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-This module is where you implement all stateful Mongo data. We have provided an embedded Mongo configuration for you.
-You just need to design the data you need to store and the repositories to store or retrieve it with.
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-### Domain
+There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
-This module represents the domain you will be working with. The domain module presents classes for the power of attorney
-model that contains a Read or Write authorization for a Payment or Savings accountDocument.
+Here's why:
+* Your time should be focused on creating something amazing. A project that solves a problem and helps others
+* You shouldn't be doing the same tasks over and over like creating a README from scratch
+* You should implement DRY principles to the rest of your life :smile:
 
-## The task at hand
+Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have have contributed to expanding this template!
 
-Implement the following business requirement
+A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
-- Users must be able to create write or read access for payments and savings accounts
-- Users need to be able to retrieve a list of accounts they have read or write access for
+### Built With
 
-Boundaries
+This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
+* [Laravel](https://laravel.com)
 
-- You can add dependencies as you like
-- You can design the data and API models as you like (what a dream, isn't it?)
 
-Notes
 
-- The code should be ready to go to production on delivery
+<!-- GETTING STARTED -->
+## Getting Started
 
-## Background information
+This is an example of how you may give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
 
-A Power of Attorney is used when someone (grantor) wants to give access to his/her accountDocument to someone else (grantee). This
-could be read access or write access. In this way the grantee can read/write in the grantors accountDocument.
-Notice that this is a simplified version of reality.
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+   ```sh
+   git clone https://github.com/your_username_/Project-Name.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your API in `config.js`
+   ```JS
+   const API_KEY = 'ENTER YOUR API';
+   ```
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_

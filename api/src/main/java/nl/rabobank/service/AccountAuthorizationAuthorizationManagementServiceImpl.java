@@ -26,6 +26,15 @@ public class AccountAuthorizationAuthorizationManagementServiceImpl implements I
     @Autowired
     private AccountModelToDTOMapper accountModelToDTOMapper;
 
+
+    /**
+     * This is the service method for fetching the accounts for which grantee has authorization
+     *
+     * @param granteeName   name of the grantee who has power of attorney to other's accounts
+     * @return Possible outcomes :
+     *          1) A list of accounts to which the grantee has authorization
+     *          2) An empty list if the grantee does not have authorization to any accounts
+     */
     @Override
     public List<Account> getAccountsForWhichGranteeHasAuthorization(String granteeName) {
         List<AccountDocument> accountDocumentList = accountAuthorizationManagementRepository.findAccountsForWhichGranteeHasAuthorization(granteeName);
@@ -35,6 +44,19 @@ public class AccountAuthorizationAuthorizationManagementServiceImpl implements I
                 .collect(Collectors.toList());
     }
 
+
+    /**
+     * This is the service method for creating authorization
+     *
+     * @param accountNumber
+     * @param grantee
+     * @param accessType
+     *
+     * @return Possible outcomes :
+     *          1) If the account number does not exist, it throws an exception
+     *          2) If the account number exists and also the requested authorization exists for grantee for the given account, it also throws an exception
+     *          3) If the account number exists and the required authorization does not, then it creates authorization
+     */
     @Override
     public void createAuthorizationForSpecificAccountToGrantee(String accountNumber, String grantee, String accessType) {
         AccountDocument accountDocument = accountAuthorizationManagementRepository.findByAccountNumber(accountNumber);

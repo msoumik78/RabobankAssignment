@@ -8,6 +8,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
+/**
+ *  Represents the MongoDB entity corresponding to the 'Accounts' collection.
+ *  This collection has been designed to have nested/embedded list of sub documents which hold all the authorizations for the given account
+ *
+ */
+
 @Document(collection = "Accounts")
 @Data
 @AllArgsConstructor
