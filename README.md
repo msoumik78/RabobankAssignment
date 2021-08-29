@@ -24,9 +24,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project exposes 2 REST end points as follows:
-1. A GET endpoint at /manage-acccess which retrieves the list of accounts for which the grantee/POA holder has access/authorizations
-2. A POST endpoint at the same URI to provide grantees with requested authorizations 
+This small project is about customer's accounts' access management (or "Power of Attorney" management) abilities and hence exposes the below REST end points :
+1. A GET endpoint at /manage-acccess which retrieves the list of accounts for which a grantee/POA holder has access/authorizations
+2. A POST endpoint at the same URI to provide grantees the ability to add read / write authorization to specific accounts
 
 This project has been built using Spring Boot framework and uses MongoDB (embedded) for storing account and authorization related info
 
@@ -68,8 +68,10 @@ Once the application is up and running fine, the endpoints can be accessed in ei
 1. Using swagger by navigating to the URL : http://localhost:8080/swagger-ui.html
 2. Using CURL from the command line :  
 
+```JS
 curl -X GET "http://localhost:8080/account-access?granteeName=Grantee2" -H  "accept: */*"
+```
+
+```JS
 curl -X POST "http://localhost:8080/account-access" -H  "accept: */*" -H  "Content-Type: application/json" -d "{\"accountNumber\":\"12345\",\"granteeName\":\"Grantee2\",\"authType\":\"R\"}"
-
-
- 
+```
