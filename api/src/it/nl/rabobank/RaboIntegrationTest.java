@@ -1,6 +1,5 @@
-package nl.rabobank;
-
 import de.flapdoodle.embed.mongo.MongodExecutable;
+import nl.rabobank.RaboAssignmentApplication;
 import nl.rabobank.dto.AuthorizationDTO;
 import nl.rabobank.mongo.model.AccountDocument;
 import nl.rabobank.mongo.model.AccountType;
@@ -20,7 +19,7 @@ import java.util.List;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest(classes = RaboAssignmentApplication.class,webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class RaboAssignmentIntegrationTest {
+public class RaboIntegrationTest {
     @LocalServerPort
     private int port;
 

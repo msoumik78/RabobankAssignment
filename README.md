@@ -43,17 +43,17 @@ This project has been built using Spring Boot framework and uses MongoDB (embedd
 
 ### Prerequisites
 
-1. Java 8 should be already installed in the system and set in PATH environment variable
-2. Maven 3.5.x should be already installed in the system and set in PATH environment variable
+1. Java 11 should be already installed in the system and JAVA_HOME environment variable is set to refer to JDK 11
+2. At least Maven 3.5.2 should be already installed in the system used for running the maven commands (which means MAVEN_HOME/bin is set in PATH environment variable)
 
 ### Installation
 
 1. Clone the repo
 2. Open the file data/src/main/resources/logback-spring.xml
 and change the value of the property named 'LOGS' to point to an existing folder/ directory in your system. 
-3. Build the application using the command
+3. Build the application using the command :
    ```JS
-   mvn clean install -DskipTests
+   mvn clean install
    ```
 4. Navigate to the folder 'api'
 5. Execute the below command to start the spring boot app:

@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
  */
 
 @Service
-public class AccountAuthorizationAuthorizationManagementServiceImpl implements IAccountAuthorizationManagementService {
+public class AccountAuthorizationManagementServiceImpl implements IAccountAuthorizationManagementService {
 
     @Autowired
     private AccountAuthorizationManagementRepository accountAuthorizationManagementRepository;
@@ -82,7 +82,7 @@ public class AccountAuthorizationAuthorizationManagementServiceImpl implements I
                 .filter(authorizationDetails -> grantee.equals(authorizationDetails.getAuthGranteeName()))
                 .collect(Collectors.toList());
         if (!authorizationDetailsForCurrentGrantee.isEmpty()) {
-            // Current grantee may have authorization but not the requested one, throw a business exception if the requested authorization is already present
+            // Current grantee may have authorization but not the requested one - so throw a business exception if the requested authorization is already present
             handleWhenCurrentGranteeAlreadyHasSomeAuthorization(grantee, accessType, accountDocument, authorizationDetailsList, authorizationDetailsForCurrentGrantee);
         } else {
             createAuthorizationForAccount(accountDocument, authorizationDetailsList, grantee, accessType);
